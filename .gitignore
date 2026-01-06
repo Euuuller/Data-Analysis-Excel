@@ -1,0 +1,82 @@
+# ============================================
+# Excel Files - Dados Sensíveis
+# ============================================
+# Ignorar todos os arquivos Excel por questões de boas práticas
+*.xlsx
+*.xlsm
+*.xls
+*.xlsb
+*.csv
+
+# ============================================
+# Arquivos Temporários do Excel
+# ============================================
+# Arquivos temporários criados pelo Excel
+~$*.xlsx
+~$*.xlsm
+~$*.xls
+~$*.xlsb
+
+# ============================================
+# Backups e Versões Antigas
+# ============================================
+# Arquivos de backup
+*.bak
+*.backup
+*~
+
+# ============================================
+# Sistema Operacional
+# ============================================
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.directory
+
+# ============================================
+# IDEs e Editores
+# ============================================
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ============================================
+# Logs e Debugging
+# ============================================
+*.log
+logs/
+debug/
+
+# ============================================
+# Arquivos de Configuração Local
+# ============================================
+.env
+.env.local
+config.local.json
+
+# ============================================
+# Outputs e Resultados Temporários
+# ============================================
+# Manter a estrutura de pastas mas ignorar conteúdo temporário
+temp/
+tmp/
+output/*.xlsx
+output/*.csv
+!output/.gitkeep
