@@ -1,0 +1,11 @@
+# .gitkeep
+
+Este arquivo mantém a pasta `output/` no controle de versão, mesmo que esteja vazia.
+
+A pasta `output/` é destinada a armazenar resultados exportados da análise, como:
+- Gráficos exportados (.png, .jpg)
+- Relatórios em PDF
+- Dados agregados em CSV
+- Outros outputs temporários
+
+**Nota**: Os arquivos dentro desta pasta são ignorados pelo Git (conforme `.gitignore`), mas a estrutura da pasta é mantida.

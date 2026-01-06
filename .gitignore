@@ -1,12 +1,14 @@
 # ============================================
-# Excel Files - Dados Sensíveis
+# Excel Files - Arquivo de Trabalho
 # ============================================
-# Ignorar todos os arquivos Excel por questões de boas práticas
+# Ignorar arquivo Excel de trabalho (contém fórmulas e análises)
 *.xlsx
 *.xlsm
 *.xls
 *.xlsb
-*.csv
+
+# NOTA: Arquivos CSV são PERMITIDOS (dados públicos do Kaggle)
+# Os CSVs serão versionados na pasta data/
 
 # ============================================
 # Arquivos Temporários do Excel
