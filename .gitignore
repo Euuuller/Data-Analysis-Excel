@@ -11,13 +11,29 @@
 # Os CSVs serão versionados na pasta data/
 
 # ============================================
-# Arquivos Temporários do Excel
+# Arquivos do Word
+# ============================================
+# Ignorar arquivos do Microsoft Word
+*.docx
+*.doc
+*.docm
+*.dotx
+*.dot
+
+# ============================================
+# Arquivos Temporários do Excel e Word
 # ============================================
 # Arquivos temporários criados pelo Excel
 ~$*.xlsx
 ~$*.xlsm
 ~$*.xls
 ~$*.xlsb
+
+# Arquivos temporários criados pelo Word
+~$*.docx
+~$*.doc
+~WRL*.tmp
+~*.tmp
 
 # ============================================
 # Backups e Versões Antigas
