@@ -48,6 +48,23 @@ Cohort Analysis é uma técnica analítica que divide usuários em grupos relaci
 
 ---
 
+## 🌐 Dashboard Web Interativo
+
+**[🚀 Acesse o Dashboard](https://euuuller.github.io/Data-Analysis-Excel/dashboard/)**
+
+Desenvolvemos um dashboard web completo para visualização interativa dos dados de cohort:
+
+### Recursos do Dashboard
+- 📊 **Upload de Dados**: Carregue seus próprios arquivos CSV ou Excel
+- 📈 **Visualizações Interativas**: Gráficos dinâmicos com Chart.js
+- 🎨 **Heatmap de Retenção**: Matriz colorida para identificar padrões
+- 📱 **Responsivo**: Funciona perfeitamente em desktop, tablet e mobile
+- 💾 **Exportação**: Baixe os dados processados em CSV
+
+[Ver documentação completa do dashboard →](dashboard/README.md)
+
+---
+
 ## 📁 Estrutura do Projeto
 
 ```
