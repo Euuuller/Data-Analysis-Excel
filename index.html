@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Dashboard de Análise de Cohort 2014 - Análise completa de retenção, receita e LTV" />
+  <title>Dashboard de Cohort 2014 | Data-Analysis</title>
+  <link rel="stylesheet" href="./src/css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand__logo" aria-hidden="true">DA</div>
+      <div>
+        <p class="brand__title">Dashboard de Cohort 2014</p>
+        <p class="brand__subtitle">Análise Completa: Janeiro a Dezembro</p>
+      </div>
+    </div>
+    <div class="meta">
+      <span class="badge badge--dark">HTML · CSS · JS</span>
+      <span class="badge">Ano base: 2014</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <!-- Business Context Section -->
+    <section class="panel panel--business-context">
+      <div class="panel__header">
+        <div>
+          <p class="eyebrow">Contexto de Negócio</p>
+          <h2>SuperStore: Desafios e Oportunidades</h2>
+          <p class="muted">
+            Compreenda o cenário, os desafios e os objetivos que motivam esta análise de dados
+          </p>
+        </div>
+      </div>
+
+      <!-- Business Context Tabs -->
+      <div class="business-tab-controls">
+        <button class="business-tab-btn business-tab-btn--active" data-business-tab="overview">
+          🏢 Visão Geral
+        </button>
+        <button class="business-tab-btn" data-business-tab="challenges">
+          🎯 Desafios
+        </button>
+        <button class="business-tab-btn" data-business-tab="objectives">
+          📊 Objetivos
+        </button>
+      </div>
+
+      <!-- Tab Content: Overview -->
+      <div class="business-tab-content business-tab-content--active" data-business-tab-content="overview">
+        <div class="business-overview">
+          <div class="business-hero">
+            <div class="business-hero__icon">🏪</div>
+            <h3>Sobre a SuperStore</h3>
+            <p class="business-hero__description">
+              A <strong>SuperStore</strong> é uma das maiores redes de supermercados do país,
+              reconhecida por sua ampla presença nacional e compromisso com a excelência no atendimento ao cliente.
+            </p>
+          </div>
+
+          <div class="business-stats-grid">
+            <div class="business-stat-card">
+              <div class="business-stat-icon">📍</div>
+              <h4>Presença Nacional</h4>
+              <p>Operações em múltiplas regiões do Brasil com centenas de lojas</p>
+            </div>
+            <div class="business-stat-card">
+              <div class="business-stat-icon">👥</div>
+              <h4>Base de Clientes</h4>
+              <p>Milhares de clientes ativos com histórico de compras detalhado</p>
+            </div>
+            <div class="business-stat-card">
+              <div class="business-stat-icon">📦</div>
+              <h4>Catálogo Diversificado</h4>
+              <p>Ampla variedade de produtos em múltiplas categorias</p>
+            </div>
+            <div class="business-stat-card">
+              <div class="business-stat-icon">💾</div>
+              <h4>Dados Ricos</h4>
+              <p>Informações completas sobre clientes, pedidos, localizações e produtos</p>
+            </div>
+          </div>
+
+          <div class="business-context-box">
+            <h4>🔍 Contexto Atual</h4>
+            <p>
+              Apesar de sua posição consolidada no mercado, a SuperStore enfrenta desafios
+              relacionados à <strong>retenção de clientes</strong> e à <strong>otimização de suas estratégias de
+                vendas</strong>.
+              A empresa possui dados ricos sobre suas operações, mas precisa de uma análise
+              detalhada para transformar esses dados em <strong>decisões estratégicas baseadas em evidências</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Content: Challenges -->
+      <div class="business-tab-content" data-business-tab-content="challenges">
+        <div class="challenges-container">
+          <div class="challenge-intro">
+            <h3>🎯 Principais Desafios Identificados</h3>
+            <p class="muted">
+              O time de gestão identificou três áreas críticas que requerem atenção imediata
+              e análise aprofundada para melhorar o desempenho da empresa.
+            </p>
+          </div>
+
+          <div class="challenges-grid">
+            <div class="challenge-card challenge-card--primary">
+              <div class="challenge-number">1</div>
+              <div class="challenge-icon">📉</div>
+              <h4>Retenção de Clientes</h4>
+              <p class="challenge-description">
+                <strong>Problema:</strong> Taxa de churn elevada, com clientes não retornando após a primeira compra.
+              </p>
+              <ul class="challenge-list">
+                <li>Identificar padrões de comportamento de clientes que abandonam</li>
+                <li>Entender o ciclo de vida do cliente</li>
+                <li>Medir a efetividade das estratégias de retenção atuais</li>
+                <li>Desenvolver ações preventivas para reduzir o churn</li>
+              </ul>
+            </div>
+
+            <div class="challenge-card challenge-card--secondary">
+              <div class="challenge-number">2</div>
+              <div class="challenge-icon">💰</div>
+              <h4>Otimização de Receita</h4>
+              <p class="challenge-description">
+                <strong>Problema:</strong> Necessidade de maximizar o valor do tempo de vida do cliente (LTV).
+              </p>
+              <ul class="challenge-list">
+                <li>Identificar clientes de alto valor</li>
+                <li>Analisar padrões de compra e frequência</li>
+                <li>Desenvolver estratégias de upsell e cross-sell</li>
+                <li>Otimizar campanhas de marketing baseadas em valor do cliente</li>
+              </ul>
+            </div>
+
+            <div class="challenge-card challenge-card--tertiary">
+              <div class="challenge-number">3</div>
+              <div class="challenge-icon">📊</div>
+              <h4>Análise de Cohort</h4>
+              <p class="challenge-description">
+                <strong>Problema:</strong> Falta de visibilidade sobre o desempenho de diferentes safras de clientes.
+              </p>
+              <ul class="challenge-list">
+                <li>Comparar performance entre diferentes períodos de aquisição</li>
+                <li>Identificar sazonalidade e tendências temporais</li>
+                <li>Avaliar impacto de campanhas específicas</li>
+                <li>Prever comportamento futuro baseado em dados históricos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Content: Objectives -->
+      <div class="business-tab-content" data-business-tab-content="objectives">
+        <div class="objectives-container">
+          <div class="objectives-intro">
+            <h3>📊 Objetivos da Análise</h3>
+            <p class="muted">
+              Esta análise de cohort tem como objetivo fornecer insights acionáveis para
+              a tomada de decisões estratégicas baseadas em dados.
+            </p>
+          </div>
+
+          <div class="objectives-grid">
+            <div class="objective-card">
+              <div class="objective-icon">🔍</div>
+              <h4>Análise Exploratória</h4>
+              <p>Realizar análise exploratória dos dados de clientes, pedidos e produtos para identificar padrões e
+                tendências.</p>
+            </div>
+
+            <div class="objective-card">
+              <div class="objective-icon">📈</div>
+              <h4>Métricas de Retenção</h4>
+              <p>Calcular e visualizar métricas de retenção por cohort, identificando períodos de maior e menor
+                fidelização.</p>
+            </div>
+
+            <div class="objective-card">
+              <div class="objective-icon">💎</div>
+              <h4>Valor do Cliente</h4>
+              <p>Analisar o valor do tempo de vida do cliente (LTV) e ARPU por safra para otimizar estratégias de
+                monetização.</p>
+            </div>
+
+            <div class="objective-card">
+              <div class="objective-icon">🎯</div>
+              <h4>Segmentação</h4>
+              <p>Segmentar clientes com base em comportamento de compra e valor para personalizar abordagens de
+                marketing.</p>
+            </div>
+
+            <div class="objective-card">
+              <div class="objective-icon">📅</div>
+              <h4>Sazonalidade</h4>
+              <p>Identificar padrões sazonais e tendências temporais que impactam vendas e retenção.</p>
+            </div>
+
+            <div class="objective-card">
+              <div class="objective-icon">💡</div>
+              <h4>Recomendações</h4>
+              <p>Fornecer recomendações estratégicas baseadas em dados para melhorar retenção e receita.</p>
+            </div>
+          </div>
+
+          <div class="methodology-box">
+            <h4>🔬 Metodologia</h4>
+            <p>
+              Utilizamos <strong>análise de cohort</strong> para agrupar clientes por período de aquisição
+              e acompanhar seu comportamento ao longo do tempo. Esta abordagem permite:
+            </p>
+            <ul>
+              <li>Comparar performance entre diferentes safras de clientes</li>
+              <li>Identificar padrões de retenção e churn</li>
+              <li>Medir o impacto de mudanças estratégicas</li>
+              <li>Prever comportamento futuro com base em dados históricos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Section - Resumo Executivo -->
+    <section class="hero">
+      <div class="hero__content">
+        <p class="eyebrow" style="color: rgba(255,255,255,0.7);">Apresentação da Aplicação de Estudo</p>
+        <h1 class="hero__title">Análise de Cohort: Safra 2014</h1>
+        <p class="hero__subtitle">
+          Insights críticos sobre retenção, churn e monetização de clientes ao longo de 12 meses
+        </p>
+      </div>
+
+      <div class="insights-grid">
+        <div class="insight-card insight-card--success">
+          <div class="insight-icon">📈</div>
+          <h3>Melhor Retenção</h3>
+          <p class="insight-value">24.19%</p>
+          <p class="insight-label">Novembro - Mês 1</p>
+          <p class="muted small">Mais que o dobro da média do ano (11.85%)</p>
+        </div>
+
+        <div class="insight-card insight-card--warning">
+          <div class="insight-icon">⚠️</div>
+          <h3>Maior Churn</h3>
+          <p class="insight-value">93.85%</p>
+          <p class="insight-label">Março - Mês 1</p>
+          <p class="muted small">Apenas 6.15% de retenção imediata</p>
+        </div>
+
+        <div class="insight-card insight-card--info">
+          <div class="insight-icon">💰</div>
+          <h3>Maior LTV (M3-M5)</h3>
+          <p class="insight-value">R$ 175,60</p>
+          <p class="insight-label">Maio - Por Cliente</p>
+          <p class="muted small">Clientes mais valiosos a médio prazo</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section class="panel">
+      <div class="panel__header">
+        <div>
+          <p class="eyebrow">Entrada de dados</p>
+          <h2>CSV original e análise</h2>
+          <p class="muted">
+            Arquivo de referência: <code>Data/raw/Novo(a) Planilha do Microsoft Excel.csv</code>
+          </p>
+        </div>
+        <div class="actions">
+          <button class="btn btn--ghost" id="btn-open-doc">📄 Ver PDF 2014</button>
+          <label class="btn btn--primary">
+            📊 Importar CSV
+            <input type="file" id="file-input" accept=".csv" hidden />
+          </label>
+        </div>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="card">
+          <p class="eyebrow">Total de registros</p>
+          <p class="stat" id="stat-rows">—</p>
+          <p class="muted">Linhas processadas do CSV</p>
+        </div>
+        <div class="card">
+          <p class="eyebrow">Períodos (cohorts)</p>
+          <p class="stat" id="stat-periods">—</p>
+          <p class="muted">Meses de entrada (Jan-Dez)</p>
+        </div>
+        <div class="card">
+          <p class="eyebrow">Receita total</p>
+          <p class="stat" id="stat-revenue">—</p>
+          <p class="muted">Somatório monetário acumulado</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabelas de Cohort -->
+    <section class="panel">
+      <div class="panel__header">
+        <div>
+          <p class="eyebrow">Tabelas de cohort</p>
+          <h2>Retenção, Percentual e Receita</h2>
+          <p class="muted">
+            Cada tabela mostra o mês de entrada (cohort) na linha e o mês relativo (0-11) na coluna.
+            Heatmap aplicado para identificação visual rápida.
+          </p>
+        </div>
+        <div class="legend">
+          <span class="legend__item" style="background: hsl(240, 60%, 25%); color: #fff;">Muito Baixo</span>
+          <span class="legend__item" style="background: hsl(180, 70%, 35%); color: #fff;">Baixo</span>
+          <span class="legend__item" style="background: hsl(120, 75%, 40%); color: #fff;">Médio</span>
+          <span class="legend__item" style="background: hsl(60, 80%, 50%); color: #0b1223;">Alto</span>
+          <span class="legend__item" style="background: hsl(0, 90%, 55%); color: #fff;">Muito Alto</span>
+        </div>
+      </div>
+
+      <!-- Tab Controls -->
+      <div class="tab-controls">
+        <button class="tab-btn tab-btn--active" data-tab="count">
+          📊 Contagem
+        </button>
+        <button class="tab-btn" data-tab="percent">
+          📈 Percentual
+        </button>
+        <button class="tab-btn" data-tab="revenue">
+          💵 Receita
+        </button>
+      </div>
+
+      <!-- Tab Content: Contagem -->
+      <div class="tab-content tab-content--active" data-tab-content="count">
+        <article class="card card--table">
+          <header class="card__header">
+            <h3>📊 Cohort - Contagem</h3>
+            <p class="muted">Número absoluto de clientes por mês relativo</p>
+          </header>
+          <div id="table-count" class="table-placeholder" aria-live="polite">
+            Carregando tabela de contagem...
+          </div>
+        </article>
+      </div>
+
+      <!-- Tab Content: Percentual -->
+      <div class="tab-content" data-tab-content="percent">
+        <article class="card card--table">
+          <header class="card__header">
+            <h3>📈 Cohort - Percentual</h3>
+            <p class="muted">Taxa de retenção relativa ao Mês 0</p>
+          </header>
+          <div id="table-percent" class="table-placeholder" aria-live="polite">
+            Carregando tabela de percentual...
+          </div>
+        </article>
+      </div>
+
+      <!-- Tab Content: Receita -->
+      <div class="tab-content" data-tab-content="revenue">
+        <article class="card card--table">
+          <header class="card__header">
+            <h3>💵 Cohort - Receita</h3>
+            <p class="muted">Valor monetário (R$) por mês relativo</p>
+          </header>
+          <div id="table-revenue" class="table-placeholder" aria-live="polite">
+            Carregando tabela de receita...
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Análise de Retenção -->
+    <section class="panel">
+      <div class="panel__header">
+        <div>
+          <p class="eyebrow">Diagnóstico de saúde</p>
+          <h2>Análise de Retenção & Churn</h2>
+          <p class="muted">Comparação de performance entre safras e identificação de padrões</p>
+        </div>
+      </div>
+
+      <div class="comparison-grid">
+        <div class="card">
+          <h3>🎯 Retenção Mês 1 por Safra</h3>
+          <canvas id="chart-retention-comparison" role="img" aria-label="Comparação de retenção"></canvas>
+        </div>
+
+        <div class="card">
+          <h3>📉 Churn Imediato</h3>
+          <div class="metric-list">
+            <div class="metric-item metric-item--danger">
+              <span class="metric-label">Pior Churn</span>
+              <span class="metric-value">93.85%</span>
+              <span class="metric-sublabel">Março (apenas 6.15% retidos)</span>
+            </div>
+            <div class="metric-item metric-item--success">
+              <span class="metric-label">Melhor Retenção</span>
+              <span class="metric-value">24.19%</span>
+              <span class="metric-sublabel">Novembro (15 de 62 clientes)</span>
+            </div>
+            <div class="metric-item">
+              <span class="metric-label">Média Geral</span>
+              <span class="metric-value">12.87%</span>
+              <span class="metric-sublabel">Churn médio de 87.13%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card highlight-card">
+        <h3>🔄 Padrão de Ressurreição de Clientes</h3>
+        <p>
+          <strong>100% das safras</strong> apresentam "ressurreição" - clientes inativos que retornam em meses
+          posteriores.
+          Exemplo: Janeiro sobe de 6.25% (M6) para 21.88% (M10), indicando alta reativabilidade da base.
+        </p>
+        <p class="muted">
+          💡 <strong>Insight:</strong> O churn primário pode ser mais sobre inatividade do que insatisfação permanente.
+        </p>
+      </div>
+    </section>
+
+    <!-- Análise de Receita e LTV -->
+    <section class="panel">
+      <div class="panel__header">
+        <div>
+          <p class="eyebrow">Monetização</p>
+          <h2>Análise de Receita & LTV</h2>
+          <p class="muted">ARPU, valor do cliente e sustentabilidade de receita</p>
+        </div>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card">
+          <h3>💰 ARPU Mês 0 por Safra</h3>
+          <canvas id="chart-arpu" role="img" aria-label="ARPU por safra"></canvas>
+        </div>
+
+        <div class="card">
+          <h3>📊 LTV Acumulado (M3-M5)</h3>
+          <canvas id="chart-ltv" role="img" aria-label="LTV acumulado"></canvas>
+        </div>
+      </div>
+
+      <div class="comparison-grid">
+        <div class="card card--highlight">
+          <h4>🏆 Maior ARPU Inicial</h4>
+          <p class="big-number">R$ 847,03</p>
+          <p class="muted">Março - Receita M0 de R$ 55.056,70 / 65 clientes</p>
+          <p class="warning-text">⚠️ Mas decaiu 97% no Mês 1 (não sustentável)</p>
+        </div>
+
+        <div class="card card--highlight">
+          <h4>💎 Maior LTV Médio Prazo</h4>
+          <p class="big-number">R$ 175,60</p>
+          <p class="muted">Maio - Acumulado M3-M5 por cliente</p>
+          <p class="success-text">✅ Clientes mais valiosos a longo prazo</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>⚖️ Sustentabilidade: Março vs. Agosto</h3>
+        <div class="comparison-table">
+          <table class="simple-table">
+            <thead>
+              <tr>
+                <th>Safra</th>
+                <th>Receita M0</th>
+                <th>Receita M1</th>
+                <th>Queda %</th>
+                <th>Avaliação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Março</strong></td>
+                <td>R$ 55.056,70</td>
+                <td>R$ 1.519,55</td>
+                <td class="danger-text">-97.24%</td>
+                <td>❌ Não sustentável</td>
+              </tr>
+              <tr>
+                <td><strong>Agosto</strong></td>
+                <td>R$ 22.634,69</td>
+                <td>R$ 8.059,58</td>
+                <td class="warning-text">-64.39%</td>
+                <td>✅ Mais resiliente</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="muted">
+          💡 Agosto sustenta melhor percentualmente, enquanto Março tem pico alto mas decaimento catastrófico.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sazonalidade -->
+    <section class="panel">
+      <div class="panel__header">
+        <div>
+          <p class="eyebrow">Padrões temporais</p>
+          <h2>Análise de Sazonalidade</h2>
+          <p class="muted">Comparação semestral e identificação de tendências</p>
+        </div>
+      </div>
+
+      <div class="comparison-grid">
+        <div class="card card--semester">
+          <h3>📅 1º Semestre (Jan-Jun)</h3>
+          <div class="semester-metrics">
+            <div class="semester-metric">
+              <span class="label">ARPU M0 Médio</span>
+              <span class="value">R$ 388,80</span>
+            </div>
+            <div class="semester-metric">
+              <span class="label">Retenção M1 Média</span>
+              <span class="value">11.77%</span>
+            </div>
+          </div>
+          <p class="muted">💰 Maior valor transacional inicial, mas menor retenção</p>
+        </div>
+
+        <div class="card card--semester card--semester-winner">
+          <h3>📅 2º Semestre (Jul-Dez)</h3>
+          <div class="semester-metrics">
+            <div class="semester-metric">
+              <span class="label">ARPU M0 Médio</span>
+              <span class="value">R$ 299,33</span>
+            </div>
+            <div class="semester-metric">
+              <span class="label">Retenção M1 Média</span>
+              <span class="value success-text">12.91%</span>
+            </div>
+          </div>
+          <p class="muted">✅ Melhor retenção, impulsionada por Novembro (24.19%)</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>📈 Velocidade de Churn</h3>
+        <p>
+          O churn imediato (M1) é alto em todo o ano, mas <strong>diminui no segundo semestre</strong>.
+          A presença de 0% de retenção em meses subsequentes é um padrão de <em>dormência seguida por reativação</em>,
+          não perda acelerada.
+        </p>
+        <canvas id="chart-churn-velocity" role="img" aria-label="Velocidade de churn"></canvas>
+      </div>
+    </section>
+
+    <!-- Gráficos Gerais -->
+    <section class="panel">
+      <div class="panel__header">
+        <div>
+          <p class="eyebrow">Visualizações</p>
+          <h2>Gráficos de Apoio</h2>
+          <p class="muted">Tendências de retenção e receita acumulada</p>
+        </div>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card card--canvas">
+          <header class="card__header">
+            <h3>📉 Retenção Média por Mês Relativo</h3>
+          </header>
+          <canvas id="chart-retention" role="img" aria-label="Gráfico de retenção"></canvas>
+        </div>
+
+        <div class="card card--canvas">
+          <header class="card__header">
+            <h3>💵 Receita Acumulada por Mês</h3>
+          </header>
+          <canvas id="chart-revenue" role="img" aria-label="Gráfico de receita"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recomendações -->
+    <section class="panel panel--recommendations">
+      <div class="panel__header">
+        <div>
+          <p class="eyebrow">Plano de ação</p>
+          <h2>Sugestões Estratégicas para 2015</h2>
+          <p class="muted">Baseado nos insights da análise de 2014</p>
+        </div>
+      </div>
+
+      <div class="recommendations-grid">
+        <div class="recommendation-card">
+          <div class="recommendation-number">1</div>
+          <h3>🎯 Replicar Estratégia de Novembro</h3>
+          <p>
+            Isolar e replicar as condições (canal, oferta, onboarding) da safra de <strong>Novembro</strong>
+            que alcançou 24.19% de retenção M1 - mais que o dobro da média.
+          </p>
+          <ul>
+            <li>Analisar campanhas de Black Friday/fim de ano</li>
+            <li>Identificar perfil de cliente de alta fidelidade</li>
+            <li>Testar replicação em outros meses</li>
+          </ul>
+        </div>
+
+        <div class="recommendation-card">
+          <div class="recommendation-number">2</div>
+          <h3>💎 Estudar e Replicar DNA de Maio</h3>
+          <p>
+            Analisar comportamento de recompra dos clientes de <strong>Maio</strong> (LTV M3-M5 de R$ 175,60).
+            Objetivo: replicar qualidade desses clientes em outras safras.
+          </p>
+          <ul>
+            <li>Mapear jornada de compra dos clientes de Maio</li>
+            <li>Identificar padrões de upsell/cross-sell</li>
+            <li>Aplicar aprendizados em safras de alto ARPU (como Março)</li>
+          </ul>
+        </div>
+
+        <div class="recommendation-card">
+          <div class="recommendation-number">3</div>
+          <h3>🚨 Corrigir Churn Crítico (Primeiros 30 Dias)</h3>
+          <p>
+            Desenvolver plano de intervenção para clientes de <strong>alto ARPU M0</strong> (como Março, R$ 847)
+            para evitar perda drástica no M1 (-97%).
+          </p>
+          <ul>
+            <li>Implementar white glove service para clientes premium</li>
+            <li>Campanhas de re-engagement nos primeiros 15 dias</li>
+            <li>Melhorar time-to-value do produto</li>
+          </ul>
+        </div>
+
+        <div class="recommendation-card">
+          <div class="recommendation-number">4</div>
+          <h3>🔄 Aproveitar Ressurreição de Clientes</h3>
+          <p>
+            Com 100% das safras mostrando padrão de ressurreição, criar campanhas de reativação
+            estratégicas nos <strong>Meses 3-5</strong>.
+          </p>
+          <ul>
+            <li>Réguas de comunicação automatizadas</li>
+            <li>Ofertas personalizadas para clientes inativos</li>
+            <li>Monitorar padrões de reengajamento</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="muted">
+      Dashboard de Análise de Cohort 2014 · Desenvolvido com HTML, CSS e JavaScript ·
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="./src/js/dataLoader.js"></script>
+  <script src="./src/js/cohortCharts.js"></script>
+  <script src="./src/js/app.js"></script>
+</body>
+
+</html>
